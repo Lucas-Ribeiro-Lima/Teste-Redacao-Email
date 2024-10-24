@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste Prático de Envio de E-mail</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/campos.css" />
+    <link rel="stylesheet" href="./css/estrutura.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <img
+        src="./public/zimbra_logo.png"
+        alt="Logo do provedor de e-mail Zimbra"
+        height="50"
+      />
+    </header>
+
+    <div class="enunciado">
+      <h2>Teste de Redação de E-mail 📧</h2>
+      <p>Por favor, redija um e-mail conforme a situação abaixo:</p>
+      <p>
+        Você precisa solicitar o documento de um veículo ao setor de manutenção.
+        Um dos responsáveis, que deve receber o e-mail, utiliza o endereço
+        <strong>manutencao2@teste.com.br</strong>. Além disso, como se trata de
+        uma solicitação de extrema importância, é necessário copiar o seu
+        gerente imediato, cujo e-mail é
+        <strong>auditoria@teste.com.br</strong>.
+      </p>
+      <p>
+        Complete o formulário abaixo simulando o envio deste e-mail.
+        <strong>Atenção:</strong> Não se esqueça de informar seu nome e data do
+        teste para que possamos identificá-lo! 😁
+      </p>
+      <p>Boa sorte e bom teste! 🚀</p>
+    </div>
+
+    <div>
+      <form class="candidato">
+        <label for="nomeCandidato">
+          <strong>Candidato:</strong>
+          <input type="text" name="nomeCandidato" id="nomeCandidato" />
+        </label>
+        <label for="idadeCandidato">
+          <strong>Data do teste:</strong>
+          <input type="date" name="dataDoTeste" id="dataDoTeste" />
+        </label>
+      </form>
+    </div>
+    <div class="emailBox">
+      <form class="email" onsubmit="">
+        <div class="cabecalhoEmail">
+          <button id="enviar" onclick="submit">Enviar</button>
+          <button id="cancelar">Cancelar</button>
+          <button id="limpar">Limpar</button>
+        </div>
+
+        <div class="metadata">
+          <div id="paraCampo">
+            <div>Para:</div>
+            <label for="paraInput">
+              <input type="text" name="Para" id="paraInput" />
+            </label>
+          </div>
+          <div id="ccCampo">
+            <div>Cc:</div>
+            <label for="ccInput">
+              <input type="text" name="Cc" id="ccInput" />
+            </label>
+          </div>
+          <div id="assuntoCampo">
+            <div>Assunto:</div>
+            <label for="assuntoInput">
+              <input type="text" name="assunto" id="assuntoInput" />
+            </label>
+          </div>
+          <div id="anexoCampo">
+            <div>Anexo:</div>
+            <label for="anexoEmail" class="anexo">
+              <input type="file" name="anexo" id="anexoEmail" />
+            </label>
+          </div>
+        </div>
+
+        <div class="separador"></div>
+
+        <div class="mensagemBox">
+          <textarea
+            name="mensagem"
+            id="mensagem"
+            rows="10"
+            placeholder="Escreva sua mensagem aqui..."
+          ></textarea>
+        </div>
+      </form>
+    </div>
+
+    <footer></footer>
+
+    <script src="./javascript/script.js"></script>
+  </body>
+</html>
