@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teste Prático de Envio de E-mail</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/campos.css" />
-    <link rel="stylesheet" href="./css/estrutura.css" /> 
-    <link rel="stylesheet" href="./css/enunciado.css" /> 
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/campos.css" />
+    <link rel="stylesheet" href="../css/estrutura.css" /> 
+    <link rel="stylesheet" href="../css/enunciado.css" /> 
   </head>
   <body>
     <header class="cabecalho">
       <div class="logo">
         <img
-          src="./zimbra_logo.png"
+          src="../images/zimbra_logo.png"
           alt="Logo do provedor de e-mail Zimbra"
           height="50"
           class="logo"
@@ -42,6 +42,10 @@
       <form class="email">
         <div class="cabecalhoEmail">
           <div class="botoesEmail">
+            <div id="spinner" style="display: blcok;">
+              <img src="../images/spinner.svg" alt="Carregando..." />
+              <div>Carregando...</div>
+            </div>
             <button id="enviar">Enviar</button>
             <button id="cancelar">Cancelar</button>
             <button id="limpar">Limpar</button>
@@ -88,6 +92,6 @@
     </div>
 
     <footer></footer>
-    <script src="./javascript/script.js"></script>
+    <script src="../javascript/script.js"></script>
   </body>
 </html>

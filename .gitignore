@@ -6,3 +6,6 @@
 
 #node_modules
 /questionario/node_modules/
+
+#data
+/questionario/src/data/testes/*

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "./src/main.js",
   "scripts": {
-    "start": "node ./src/main.js",
+    "start": "node  --env-file=.env ./src/main.js",
     "dev": "nodemon --exec node --inspect --env-file=.env ./src/main.js"
   },
   "author": "Lucas Ribeiro Lima",

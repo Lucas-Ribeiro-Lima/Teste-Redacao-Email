@@ -3,12 +3,16 @@ const fs = require("fs/promises")
 
 const dirPath = path.join(process.cwd(), "src", "data", "testes")
 
-async function saveFile(fileData, fileName) {
-  await fs.mkdir(dirPath, { recursive: true });
+async function saveFile(fileData, emailData) {
+  const dirName = path.join(dirPath, emailData.assunto)
 
-  const filePath = path.join(dirPath, `${fileName}.xlsx`);
+  await fs.mkdir(dirName, { recursive: true });
 
-  await fs.writeFile(filePath, fileData, {flag: "w+"});
+  const emailPath = path.join(dirName, `email.txt`)
+  const anexoPath = path.join(dirName, `anexo.png`);
+
+  await fs.writeFile(emailPath, JSON.stringify(emailData))
+  await fs.writeFile(anexoPath, fileData);
   return 0
 }
 

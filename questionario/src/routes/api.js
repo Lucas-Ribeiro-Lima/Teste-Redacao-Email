@@ -19,7 +19,7 @@ apiRouter.post("/redacao/email", upload.single("anexo"), parseRequiredBody, asyn
     const anexo = req.file
     const email = req.body
   
-    await saveFile(anexo.buffer, email.assunto)
+    await saveFile(anexo.buffer, email)
     res.status(200).json({message: "Arquivo salvo com sucesso"})
   } catch (error) {
     next(error)
