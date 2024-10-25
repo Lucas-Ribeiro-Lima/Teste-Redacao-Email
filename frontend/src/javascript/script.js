@@ -35,7 +35,7 @@ form.addEventListener("submit", (e) => {
 
   enviar.addEventListener("click", (e) => {
     e.preventDefault()
-    fetch("/backend", {
+    fetch("/redacao/email", {
       method: "POST",
       body: formData,
     }).then(response => {

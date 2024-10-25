@@ -2,6 +2,11 @@
   color: black;
 }
 
+body {
+  height: 100vh;
+}
+
+
 @media (max-width: 700px) {
   body {
     font-size: 11px;
