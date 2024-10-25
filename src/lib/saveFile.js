@@ -9,11 +9,10 @@ async function saveFile(fileData, emailData) {
   await fs.mkdir(dirName, { recursive: true });
 
   const emailPath = path.join(dirName, `email.txt`)
-  const anexoPath = path.join(dirName, `anexo.png`);
+  const anexoPath = path.join(dirName, `anexo.xlsx`);
 
   await fs.writeFile(emailPath, JSON.stringify(emailData))
   await fs.writeFile(anexoPath, fileData);
-  return 0
 }
 
 module.exports = saveFile

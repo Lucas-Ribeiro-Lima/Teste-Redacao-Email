@@ -2,10 +2,10 @@
 .vscode/
 
 #backend env
-/questionario/.env
+/.env
 
 #node_modules
-/questionario/node_modules/
+/node_modules/
 
 #data
-/questionario/src/data/testes/*
+/src/data/testes/*
