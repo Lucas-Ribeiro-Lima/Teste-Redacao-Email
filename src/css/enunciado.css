@@ -1,0 +1,11 @@
+.enunciado > h2 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.enunciado p {
+  margin: 12px;
+
+  text-align: justify;
+}

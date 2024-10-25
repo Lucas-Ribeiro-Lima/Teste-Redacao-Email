@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste Prático de Envio de E-mail</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/campos.css" />
+    <link rel="stylesheet" href="./css/estrutura.css" /> 
+    <link rel="stylesheet" href="./css/enunciado.css" /> 
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="logo">
+        <img
+          src="../public/zimbra_logo.png"
+          alt="Logo do provedor de e-mail Zimbra"
+          height="50"
+          class="logo"
+        />
+      </div>
+      <h1>Teste de Redação de E-mail 📧</h1>
+    </header>
+
+    <div class="enunciado">
+      <p>Por favor, redija um e-mail conforme a situação abaixo:</p>
+      <p>
+        Prezado (a) candidato (a), Redija um email abaixo para envio do seu
+        teste realizado no excel. O e-mail devera ser direcionado para
+        <strong>xxx@xxx.com.br</strong> , com cópia para o e-mail
+        <strong>auditoria@viacaoanchieta.com.br.</strong>
+
+      </p>
+      <p>
+        Coloque o assunto que irá identificar o seu teste. Não esqueca de anexar
+        o seu arquivo e assinar com seu nome completo e telefone.
+      </p>
+      <p>Boa sorte e bom teste! 🚀</p>
+    </div>
+    <div class="separador"></div>
+    <div class="emailBox">
+      <form class="email">
+        <div class="cabecalhoEmail">
+          <div class="botoesEmail">
+            <button id="enviar">Enviar</button>
+            <button id="cancelar">Cancelar</button>
+            <button id="limpar">Limpar</button>
+          </div>       
+          <div class="metadata">
+            <div id="paraCampo" class="metadataInputs">
+              <div>Para:</div>
+              <label for="paraInput" >
+                <input type="text" name="Para" id="paraInput" required="true"/>
+              </label>
+            </div>
+            <div id="ccCampo" class="metadataInputs">
+              <div>Cc:</div>
+              <label for="ccInput" aria-label="ccInput">
+                <input type="text" name="Cc" id="ccInput"/>
+              </label>
+            </div>
+            <div id="assuntoCampo" class="metadataInputs">
+              <div>Assunto:</div>
+              <label for="assuntoInput" aria-label="assuntoInput">
+                <input type="text" name="assunto" id="assuntoInput" required="true"/>
+              </label>
+            </div>
+            <div id="anexoCampo" class="metadataInputs">
+              <div>Anexo:</div>
+              <label for="anexoEmail" class="anexo" aria-label="anexoEmail">
+                <input type="file" name="anexo" id="anexoEmail"/>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="separador"></div>
+
+        <div class="mensagemBox">
+          <textarea
+          name="mensagem"
+          id="mensagem"
+          rows="10"
+          placeholder="Escreva sua mensagem aqui..."
+        ></textarea>
+        </div>
+      </form>
+    </div>
+
+    <footer></footer>
+    <script src="./javascript/script.js"></script>
+  </body>
+</html>

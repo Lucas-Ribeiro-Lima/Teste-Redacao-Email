@@ -1,0 +1,68 @@
+form.email {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 8px;
+}
+
+.botoesEmail {
+  display: flex;
+  gap: 8px;
+  margin: 0px 0px 8px 0px;
+}
+
+.botoesEmail button {
+  padding: 4px 2px;
+  box-shadow: 2px 2px rgba(105, 104, 104, 0.329);
+
+  cursor: pointer;
+  color: black;
+}
+
+.metadata {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.metadataInputs {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.metadataInputs label {
+  width: 100%;
+}
+
+.metadataInputs input {
+  width: 100%;
+}
+
+.metadataInputs div {
+  font-weight: 500;
+  padding: 2px 4px;
+  border-radius: 2px;
+  background-color: #edeeee;
+  box-shadow: 2px 2px rgba(105, 104, 104, 0.329);
+  cursor: pointer;
+}
+
+.metadataInputs div:hover {
+  background-color: #0081c159;
+}
+
+.mensagemBox {
+  margin: 0px 24px 12px 12px;
+}
+
+.mensagemBox textarea {
+ width: 100%;
+ height: 100%;
+ padding: 4px;
+}
+
+#anexoEmail {
+  width: min-content;
+  cursor: pointer;
+}

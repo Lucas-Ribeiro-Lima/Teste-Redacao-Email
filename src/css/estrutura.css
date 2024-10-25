@@ -1,0 +1,51 @@
+* {
+  color: black;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 11px;
+  }
+
+  .logo {
+    display: none;
+  }
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 75px;
+  width: 100%;
+  background-color: #0081c1;
+}
+
+.cabecalho h1 {
+  color: white;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.separador {
+  background-color: black;
+  height: 1px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.emailBox {
+  background-color: #0081c12c;
+  height: 100%;
+}
+
+.cabecalhoEmail {
+  margin: 6px 12px 0px 12px;
+}
