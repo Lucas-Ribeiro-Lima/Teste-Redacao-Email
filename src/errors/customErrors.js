@@ -16,7 +16,7 @@ class InvalidFileInput extends CustomErrors {
 
   constructor(code, message) {
     super()
-    this.code = code
+    this.code = 400
     this.message = message
     this.type = "InvalidFileInput"
   }
@@ -27,12 +27,12 @@ class FileSystemError extends CustomErrors {
   message
   type
 
-  constructor(code, message) {
+  constructor(message) {
     super()
-    this.code = code
+    this.code = 500
     this.message = message
     this.type = "FileSystemError"
   }
 }
 
-module.exports = [InvalidFileInput, FileSystemError]
+module.exports = { CustomErrors, InvalidFileInput, FileSystemError}
