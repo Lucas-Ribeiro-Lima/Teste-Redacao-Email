@@ -2,7 +2,7 @@
 .vscode/
 
 #backend env
-/backend/.env
+/questionario/.env
 
 #node_modules
-/backend/node_modules/
+/questionario/node_modules/
