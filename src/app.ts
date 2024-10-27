@@ -17,6 +17,11 @@ app.use("/css", express.static("./public/css"))
 app.use("/javascript", express.static("./public/javascript"))
 app.use("/images", express.static("./public/images"))
 
+//Healthy
+app.get("/__health", (req, res) => {
+  res.status(200).send('ok')
+})
+
 //API
 app.use("/api", apiRouter)
 

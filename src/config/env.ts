@@ -9,6 +9,7 @@ const envSchema = z.object({
   EMAIL_SMTP_HOST: z.string({message: "Email SMTP host required"}),
   EMAIL_USER: z.string({message: "Email SMTP user login required"}),
   EMAIL_PWD: z.string({message: "Email SMTP user password required"}),
+  EMAIL_CC_USER: z.string().optional()
 })
 
 export const envs = envSchema.parse(process.env)

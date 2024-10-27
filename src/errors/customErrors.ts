@@ -56,6 +56,15 @@ export class SMTPSendError extends CustomErrors {
   }
 }
 
+export class MailInvalidError extends CustomErrors{
+  constructor(message) {
+    super()
+    this.code = 400
+    this.message = message
+    this.type = "MailInvalidError"
+  }
+}
+
 export class LoggerError extends CustomErrors {
   constructor(message) {
     super()
