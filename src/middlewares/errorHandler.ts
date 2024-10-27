@@ -1,5 +1,5 @@
 import { ZodError } from "zod"
-import { CustomErrors } from "./customErrors.ts"
+import { CustomErrors } from "../errors/customErrors.ts"
 
 export function errorHandlerHttp (err, req, res, next) {
   if(err instanceof ZodError) {

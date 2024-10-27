@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import { errorHandlerHttp } from './errors/errorHandler.ts'
+import { errorHandlerHttp } from './middlewares/errorHandler.ts'
 import { logger } from './middlewares/logger.ts'
 import { apiRouter } from './routes/api.ts'
 

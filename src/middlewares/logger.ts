@@ -1,4 +1,4 @@
-import { loggerHandler } from '../lib/logger.ts'
+import { loggerHandler } from '../lib/loggerHandler.ts'
 
 export async function logger(err, req, res, next) {
   try {

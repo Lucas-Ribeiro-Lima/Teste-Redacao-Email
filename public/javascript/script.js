@@ -12,6 +12,8 @@ const quill = new Quill('#editor-container', {
   }
 });
 
+quill.root.innerHTML = `Prezado, bom dia!<br/><br/>E-mail<br/><br/> Atenciosamente, seu nome`
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault()
   const spinner = form.querySelector("#spinner")
@@ -34,11 +36,11 @@ form.addEventListener("submit", async (e) => {
       method: "POST",
       body: formData,
     })
-    if(response.status === 200) alert("Teste enviado com sucesso! ⭐") 
-    else alert("Erro ao processar teste ⚠️")
+    if(response.status === 200) alert("Teste enviado com sucesso!")
+    else alert("Erro ao processar teste")
   } 
   catch (error) {
-    alert("⚠️ Erro ao enviar teste ⚠️")
+    alert("Erro ao enviar teste")
   } 
   finally {
     spinner.style.display = "none"

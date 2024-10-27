@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teste Prático de Envio de E-mail</title>
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/campos.css" />
     <link rel="stylesheet" href="../css/estrutura.css" /> 
     <link rel="stylesheet" href="../css/enunciado.css" /> 
@@ -23,7 +22,7 @@
       <h1>Teste de Redação de E-mail 📧</h1>
     </header>
 
-    <div class="enunciado">
+    <main class="enunciado">
       <p>Por favor, redija um e-mail conforme a situação abaixo:</p>
       <p>
         Prezado (a) candidato (a), Redija um email abaixo para envio do seu
@@ -36,54 +35,52 @@
         o seu arquivo e assinar com seu nome completo e telefone.
       </p>
       <p>Boa sorte e bom teste! 🚀</p>
-    </div>
+    </main>
+
     <div class="separador"></div>
-    <div class="emailBox">
-      <form class="email">
-        <div class="cabecalhoEmail">
-          <div class="botoesEmail">
-            <div id="spinner" style="display: blcok;">
-              <img src="../images/spinner.svg" alt="Carregando..." />
-              <div>Carregando...</div>
-            </div>
-            <button id="enviar" type="submit">Enviar</button>
-            <button id="limpar" type="reset">Limpar</button>
-          </div>       
-          <div class="metadata">
-            <div id="paraCampo" class="metadataInputs">
-              <div>Para:</div>
-              <label for="paraInput" >
-                <input type="text" name="Para" id="paraInput" required="true"/>
-              </label>
-            </div>
-            <div id="ccCampo" class="metadataInputs">
-              <div>Cc:</div>
-              <label for="ccInput" aria-label="ccInput">
-                <input type="text" name="Cc" id="ccInput"/>
-              </label>
-            </div>
-            <div id="assuntoCampo" class="metadataInputs">
-              <div>Assunto:</div>
-              <label for="assuntoInput" aria-label="assuntoInput">
-                <input type="text" name="assunto" id="assuntoInput" required="true"/>
-              </label>
-            </div>
-            <div id="anexoCampo" class="metadataInputs">
-              <div>Anexo:</div>
-              <label for="anexoEmail" class="anexo" aria-label="anexoEmail">
-                <input type="file" name="anexo" id="anexoEmail" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
-              </label>
-            </div>
+
+    <form class="emailBox email">
+      <div class="cabecalhoEmail">
+        <div class="botoesEmail">
+          <button id="enviar" type="submit">Enviar</button>
+          <button id="limpar" type="reset">Limpar</button>
+        </div>       
+        <div class="metadata">
+          <div id="paraCampo" class="metadataInputs">
+            <div>Para:</div>
+            <label for="paraInput" >
+              <input type="text" name="Para" id="paraInput" required="true"/>
+            </label>
+          </div>
+          <div id="ccCampo" class="metadataInputs">
+            <div>Cc:</div>
+            <label for="ccInput" aria-label="ccInput">
+              <input type="text" name="Cc" id="ccInput"/>
+            </label>
+          </div>
+          <div id="assuntoCampo" class="metadataInputs">
+            <div>Assunto:</div>
+            <label for="assuntoInput" aria-label="assuntoInput">
+              <input type="text" name="assunto" id="assuntoInput" required="true"/>
+            </label>
+          </div>
+          <div id="anexoCampo" class="metadataInputs">
+            <div>Anexo:</div>
+            <label for="anexoEmail" class="anexo" aria-label="anexoEmail">
+              <input type="file" name="anexo" id="anexoEmail" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+            </label>
           </div>
         </div>
-        <div class="separador"></div>
-        <div class="mensagemBox">
-          <div id="editor-container"></div>
-        </div>
-      </form>
-    </div>
-
-    <footer></footer>
+      </div>
+      <div class="separador"></div>
+      <div class="mensagemBox">
+        <div id="editor-container"></div>
+      </div>
+      <div id="spinner" style="display: blcok;">
+        <img src="../images/spinner.svg" alt="Carregando..." />
+        <div>Carregando...</div>
+      </div>  
+    </form>
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
     <script src="../javascript/script.js"></script>
   </body>

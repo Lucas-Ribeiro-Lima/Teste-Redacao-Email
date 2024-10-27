@@ -59,7 +59,13 @@ async function mailSend(email: EmailCandidato): Promise<SentMessageInfo> {
       cc: cc || "",
       subject: email.assunto,
       attachments: email.anexo ? [email.anexo] : [],
-      html: `<div>${email.mensagem}</div>`,
+      html: `
+        Destinatário: ${email.destinatario}<br/>
+        CC: ${email.copia}<br/>
+        Assunto: ${email.assunto}<br/>
+        Mensagem: <br/><br/><br/>
+        ${email.mensagem}
+        `,
     })
     return result
   } catch (error) {

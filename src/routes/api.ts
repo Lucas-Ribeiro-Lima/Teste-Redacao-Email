@@ -8,7 +8,7 @@ export const apiRouter = Router()
 //Configuração do multer
 const upload = multer({storage: multer.memoryStorage()})
 
-apiRouter.get("/", (req, res) => {
+apiRouter.get("/__health", (req, res) => {
   res.status(200).json({message: "API do questionário"})
 })
 

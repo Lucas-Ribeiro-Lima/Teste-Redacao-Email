@@ -1,6 +1,7 @@
 import path from "path";
 import { appendFile } from "fs/promises";
 import { CustomErrors } from "../errors/customErrors.ts";
+import { separatorTerminal } from "./utils.ts";
 
 const errorLogPath = path.join(process.cwd(), "src", "logs", "error-log.txt");
 
@@ -15,6 +16,7 @@ export async function loggerHandler(error: CustomErrors) {
     await appendFile(errorLogPath, errorLine)
     return;
   } catch (error) {
+    separatorTerminal()
     console.error(`\x1b[41mError writing to log file\x1b[0m`)
   }
 }
