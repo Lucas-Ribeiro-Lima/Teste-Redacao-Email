@@ -1,7 +1,7 @@
-const { ZodError } = require("zod")
-const { CustomErrors } = require("./customErrors")
+import { ZodError } from "zod"
+import { CustomErrors } from "./customErrors.ts"
 
-function errorHandlerHttp (err, req, res, next) {
+export function errorHandlerHttp (err, req, res, next) {
   if(err instanceof ZodError) {
     res.status(500).json(err)
     return
@@ -15,5 +15,3 @@ function errorHandlerHttp (err, req, res, next) {
     return
   }
 }
-
-module.exports = errorHandlerHttp

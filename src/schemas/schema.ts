@@ -1,6 +1,6 @@
-const z = require("zod")
+import z from 'zod'
 
-const formSchema = z.object({
+export const formSchema = z.object({
   destinatario: z.string({message: "destinátario obrigatório"}),
   copia: z.string().optional(),
   assunto: z.string({message: "Assunto obrigatório"}),
@@ -8,4 +8,4 @@ const formSchema = z.object({
   anexo: z.unknown(),
 })
 
-module.exports = formSchema
+export type EmailCandidato = z.infer<typeof formSchema>

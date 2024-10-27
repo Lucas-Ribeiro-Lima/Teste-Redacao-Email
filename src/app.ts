@@ -1,12 +1,11 @@
-const express = require('express')
-const cors = require("cors")
-
-const errorHandlerHttp = require('./errors/errorHandler')
-
-const apiRouter = require("./routes/api")
+import express from 'express'
+import cors from 'cors'
+import { errorHandlerHttp } from './errors/errorHandler.ts'
+import { logger } from './middlewares/logger.ts'
+import { apiRouter } from './routes/api.ts'
 
 //Express configurantion
-const app = express()
+export const app = express()
 app.use(cors())
 app.use(express.json())
 
@@ -22,6 +21,5 @@ app.use("/images", express.static("./public/images"))
 app.use("/api", apiRouter)
 
 //Error Handler
+app.use(logger)
 app.use(errorHandlerHttp)
-
-module.exports = app

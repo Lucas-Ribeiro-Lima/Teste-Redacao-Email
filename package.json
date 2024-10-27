@@ -2,9 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "./src/main.js",
+  "type": "module",
   "scripts": {
-    "start": "node  --env-file=.env ./src/main.js",
-    "dev": "nodemon --exec node --inspect --env-file=.env ./src/main.js"
+    "start": "node  --env-file=.env --experimental-strip-types ./src/main.ts",
+    "dev": "nodemon --exec node --inspect --env-file=.env --experimental-strip-types ./src/main.ts"
   },
   "author": "Lucas Ribeiro Lima",
   "license": "GPL-3.0",
@@ -13,9 +14,14 @@
     "cors": "^2.8.5",
     "express": "^4.21.1",
     "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.15",
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.8.1",
+    "@types/nodemailer": "^6.4.16",
     "nodemon": "^3.1.7"
   },
   "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"

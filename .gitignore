@@ -9,3 +9,6 @@
 
 #data
 /src/data/testes/*
+
+#logs
+/src/logs/*
