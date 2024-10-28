@@ -1,22 +1,9 @@
 import path from "path";
-import { appendFile } from "fs/promises";
-import { CustomErrors } from "../errors/customErrors.ts";
-import { separatorTerminal } from "./utils.ts";
+import { Logger } from "logger";
 
-const errorLogPath = path.join(process.cwd(), "src", "logs", "error-log.txt");
+const routeLogPath = path.join(process.cwd(), "src", "logs", "route.log");
+const mailLogPath = path.join(process.cwd(), "src", "logs", "mail.log");
 
-export async function loggerHandler(error: CustomErrors) {
-  const errorLine = `
-    date: ${Date.now().toLocaleString("pt-BR")} 
-    type: ${error.type || "Internal"}
-    code: ${error.code || 500}
-    stack: ${error.stack}
-  `
-  try {
-    await appendFile(errorLogPath, errorLine)
-    return;
-  } catch (error) {
-    separatorTerminal()
-    console.error(`\x1b[41mError writing to log file\x1b[0m`)
-  }
-}
+export const routeLogger = new Logger(routeLogPath)
+export const mailLogger = new Logger(mailLogPath)
+

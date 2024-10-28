@@ -1,8 +1,9 @@
-import { loggerHandler } from '../lib/loggerHandler.ts'
+import { routeLogger } from "../lib/loggerHandler.ts"
 
 export async function logger(err, req, res, next) {
   try {
-    await loggerHandler(err)
+    routeLogger.error(err)
+    next(err)
   } catch (error) {
     next(error)
   }

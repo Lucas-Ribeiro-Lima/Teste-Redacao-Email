@@ -44,3 +44,12 @@ O objetivo principal deste projeto é permitir ao usuário preencher um formulá
 │   └── script.js
 ├── index.html
 └── README.md
+```
+
+## Variáveis de Ambiente
+
+- **Email SMTP credentials**
+  - **EMAIL_SMTP_HOST**="stmp.host.com"
+  - **EMAIL_USER**="account@host.com"
+  - **EMAIL_PWD**="accountpwd"
+  - **EMAIL_CC_USER**="accountcc@host.com"

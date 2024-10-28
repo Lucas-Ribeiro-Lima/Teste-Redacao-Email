@@ -1,11 +1,11 @@
-import type { Http2Server } from "http2"
+import type { Server } from 'http'
 
 type OptionsType = {
   coreDump: boolean
   timeout: number
 }
 
-export function terminate(server: Http2Server, { coreDump = false, timeout = 1500 }: OptionsType ) {
+export function terminate(server: Server, { coreDump = false, timeout = 1500 }: OptionsType ) {
 
   const exit = (code: number) => coreDump ? process.abort() : process.exit(code)
 
