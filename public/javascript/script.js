@@ -36,7 +36,8 @@ form.addEventListener("submit", async (e) => {
       method: "POST",
       body: formData,
     })
-    if(response.status === 200) alert("Teste enviado com sucesso!")
+    await new Promise(resolve => setTimeout(resolve, 5000))
+    if(response.status === 200) alert("Email enviado")
     else alert("Erro ao processar teste")
   } 
   catch (error) {
