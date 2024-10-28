@@ -1,3 +1,12 @@
-FROM alpine:3.19
+FROM node:23-alpine3.20
 
-ENV NODE_VERSION 23.1.0
+RUN mkdir /webapp
+
+WORKDIR /webapp
+
+COPY . .
+
+RUN npm instal --omit=dev
+
+EXPOSE 3000
+CMD [ "npm", "start" ]

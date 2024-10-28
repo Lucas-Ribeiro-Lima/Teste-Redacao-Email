@@ -1,8 +1,9 @@
 #Vscode
 .vscode/
 
-#backend env
+#backend env e secrets
 /.env
+/secrets.txt
 
 #node_modules
 yarn.lock

@@ -1,0 +1,22 @@
+version: "3.2"
+
+networks:
+  webapp-net:
+    driver: bridge
+
+services: 
+  webapp:
+    build: .
+    container_name: "teste-redacao"
+    restart: "unless-stopped"
+    volumes:
+      - /anchieta/docker-volumes/teste-redacao/logs:/webapp/src/logs
+    ports:
+      - 3000:3000
+    environment:
+      - EMAIL_SMTP_HOST=EMAIL_SMTP_HOST
+      - EMAIL_USER=EMAIL_USER
+      - EMAIL_PWD=EMAIL_PWD
+      - EMAIL_CC_USER=EMAIL_CC_USER
+    networks:
+      - webapp-net
